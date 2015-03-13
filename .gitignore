@@ -1,0 +1,9 @@
+*.pyc
+
+#Rope
+.ropeproject
+
+# Django stuff:
+    *.log
+    *.pot
+
