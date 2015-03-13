@@ -1,5 +1,10 @@
 from django.contrib import admin
-from polls.models import Question
+from polls.models import Choice, Question
+
+
+class ChoiceInline(admin.TabularInline):
+    model = Choice
+    extra = 3
 
 
 class QuestionAdmin(admin.ModelAdmin):
@@ -8,6 +13,7 @@ class QuestionAdmin(admin.ModelAdmin):
         ('Date information',    {'fields': ['pub_date'], 'classes':
                                  ['collapse']}),
     ]
+    inlines = [ChoiceInline]
 
 
 # Register your models here.
