@@ -60,9 +60,6 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 DATABASES = {'default': dj_database_url.config(default='sqlite:////'+  os.path.join(BASE_DIR, 'db.sqlite3'))}
-print DATABASES
-print BASE_DIR
-print os.path.join(BASE_DIR, 'db.sqlite3')
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
